@@ -36,6 +36,8 @@ jobs:
         path: ~/.gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
         restore-keys: ${{ runner.os }}-gradle
+    - name: Run Android unit tests
+      run: ./gradlew cAT
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run unit tests
