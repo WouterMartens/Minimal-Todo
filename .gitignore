@@ -6,6 +6,7 @@
 #/build
 #/captures
 /.idea
+/.idea/*
 
 # Created by https://www.gitignore.io
 
