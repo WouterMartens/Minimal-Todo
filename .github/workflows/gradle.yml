@@ -43,8 +43,10 @@ jobs:
     #     script: ./gradlew connectedCheck
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Run Android unit tests
-      run: ./gradlew cAT
+    # - name: Run Android unit tests
+    #   run: ./gradlew cAT
+    - name: "Run UI Tests"
+      uses: vgaidarji/android-github-actions-emulator@v1.0.1
     - name: Run unit tests
       run: ./gradlew test
     - name: Code analysis
