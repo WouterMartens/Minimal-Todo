@@ -32,6 +32,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Run unit tests
+      run: ./gradlew test
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
