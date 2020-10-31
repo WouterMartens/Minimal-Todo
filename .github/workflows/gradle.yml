@@ -37,14 +37,14 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
         restore-keys: ${{ runner.os }}-gradle
     # - name: Run Android unit tests
-    #   run: ./gradlew cAT
-    - name: Run Android unit tests
-      uses: reactivecircus/android-emulator-runner@v2
-      with:
-        api-level: 29
-        script: ./gradlew connectedCheck
+    #   uses: reactivecircus/android-emulator-runner@v2
+    #   with:
+    #     api-level: 29
+    #     script: ./gradlew connectedCheck
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Run Android unit tests
+      run: ./gradlew cAT
     - name: Run unit tests
       run: ./gradlew test
     - name: Code analysis
